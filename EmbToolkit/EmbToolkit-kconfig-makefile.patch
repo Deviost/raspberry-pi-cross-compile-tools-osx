@@ -1,0 +1,10 @@
+--- /Users/antonm/Downloads/embtoolkit-1.5.0/scripts/kconfig/Makefile	2014-05-27 01:17:29.000000000 +0300
++++ /Volumes/EmbToolkit/scripts/kconfig/Makefile	2014-06-13 00:08:31.000000000 +0300
+@@ -268,10 +268,13 @@
+ 	    fi; \
+ 	else \
+ 	  cflags="\$$(shell pkg-config QtCore QtGui Qt3Support --cflags)"; \
+-	  libs="\$$(shell pkg-config QtCore QtGui Qt3Support --libs)"; \
++	  libs="\$$(shell pkg-config QtCore QtGui Qt3Support --libs) -lintl"; \
+ 	  moc="\$$(shell pkg-config QtCore --variable=moc_location)"; \
+ 	  [ -n "$$moc" ] || moc="\$$(shell pkg-config QtCore --variable=prefix)/bin/moc"; \

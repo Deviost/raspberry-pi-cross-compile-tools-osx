@@ -1,0 +1,16 @@
+--- ./build/tools_build-arm-linux-arm1176jzf-s/binutils-2.23.2/gold/binary.cc	2014-06-13 22:49:39.000000000 +0300
++++ ./build/tools_build-arm-linux-arm1176jzf-s/binutils-2.23.2/gold/binary.cc	2014-06-15 00:18:57.000000000 +0300
+@@ -21,12 +21,12 @@
+ // MA 02110-1301, USA.
+ 
+ #include "gold.h"
++#include "stringpool.h"
+ 
+ #include <cerrno>
+ #include <cstring>
+ #include "safe-ctype.h"
+ 
+-#include "stringpool.h"
+ #include "elfcpp.h"
+ #include "fileread.h"
+ #include "output.h"
